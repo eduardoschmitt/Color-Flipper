@@ -4,13 +4,9 @@ const color = document.querySelector(".color");
 var stringColor = '#';
 
 botao.addEventListener("click", () => {
-
     let stringColor = '#';
-    while (stringColor.length < 7) {
-        stringColor += Math.floor(Math.random() * 0x10).toString(16);
-    }
+    while (stringColor.length < 7) stringColor += Math.floor(Math.random() * 0x10).toString(16);
     console.log(stringColor);
-
     document.body.style.backgroundColor = stringColor;
     color.textContent = stringColor;
     stringColor = '#'
